@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SarriaTechLogo from "./SarriaTechLogo";
+import LegalModal, { LegalDocType } from "./LegalModal";
 import { useLanguage } from "@/context/LanguageContext";
 import { 
   ArrowUp, 
@@ -14,6 +15,13 @@ import {
 
 export default function Footer() {
   const { t, scrollToContactWithService } = useLanguage();
+  const [legalModalOpen, setLegalModalOpen] = useState(false);
+  const [legalDocType, setLegalDocType] = useState<LegalDocType>("dataTreatment");
+
+  const openLegal = (type: LegalDocType) => {
+    setLegalDocType(type);
+    setLegalModalOpen(true);
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -207,17 +215,29 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-[11px]">
-            <a href="#contacto" className="hover:text-white transition-colors">
+            <button
+              type="button"
+              onClick={() => openLegal("privacy")}
+              className="hover:text-white transition-colors"
+            >
               {t.footer.legal.privacy}
-            </a>
+            </button>
             <span>·</span>
-            <a href="#contacto" className="hover:text-white transition-colors">
+            <button
+              type="button"
+              onClick={() => openLegal("dataTreatment")}
+              className="hover:text-white transition-colors"
+            >
               {t.footer.legal.dataTreatment}
-            </a>
+            </button>
             <span>·</span>
-            <a href="#contacto" className="hover:text-white transition-colors">
+            <button
+              type="button"
+              onClick={() => openLegal("terms")}
+              className="hover:text-white transition-colors"
+            >
               {t.footer.legal.terms}
-            </a>
+            </button>
           </div>
 
           {/* Scroll to Top */}
@@ -232,6 +252,13 @@ export default function Footer() {
         </div>
 
       </div>
+
+      {/* Corporate Legal Modal */}
+      <LegalModal
+        isOpen={legalModalOpen}
+        onClose={() => setLegalModalOpen(false)}
+        initialDoc={legalDocType}
+      />
     </footer>
   );
 }

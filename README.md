@@ -56,19 +56,33 @@ Cada tarjeta cuenta con su gradiente de color representativo, elevación hover y
 
 ---
 
-## ⚙️ 4. Arquitectura Técnica
+## 🤖 4. Agente de IA en Vivo & Módulos Interactivos
+
+- **Agente de IA Oficial (Google Gemini API):**  
+  Asistente conversacional en tiempo real integrado mediante la API route `/api/chat` con modelos **Gemini 2.0 / 1.5 Flash**. Asesora a visitantes sobre los 12 servicios tecnológicos, responde dudas técnicas y canaliza oportunidades a WhatsApp. *(Las consultas sobre la plataforma GNS se redirigen cortésmente a su web oficial https://gns.sarriatech.tech).*
+- **Estimador Interactivo de Presupuestos (`BudgetEstimator`):**  
+  Calculadora cibernética donde el cliente combina servicios base y módulos adicionales (pasarelas, autenticación, APIs) con cálculo dinámico y envío directo a WhatsApp.
+- **Preguntas Frecuentes de Alta Conversión (`FAQSection`):**  
+  Acordeón con respuestas concretas sobre precios base ($500.000 COP), metodología, propiedad intelectual y soporte.
+- **Marco Legal Corporativo (`LegalModal`):**  
+  Visualización modal de la Política de Tratamiento de Datos (Ley 1581 de 2012 de Colombia), Términos de Servicio y Garantías Técnicas.
+
+---
+
+## ⚙️ 5. Arquitectura Técnica
 
 - **Framework:** Next.js 15 (App Router)
 - **Librería de UI:** React 19 + TypeScript
+- **Motor de Inteligencia Artificial:** Google Gemini API (REST Endpoint `/api/chat`)
 - **Estilos:** Tailwind CSS v4 con variables personalizadas y animaciones
 - **Iconografía:** Lucide React
 - **Internacionalización:** Contexto reactivo Español (ES) / Inglés (EN)
 - **SEO & Rendimiento:** Metadatos completos Open Graph, Twitter Cards, JSON-LD Schema.org (`Organization`, `WebSite`), `robots.ts` y `sitemap.ts`
-- **Seguridad:** Formulario con honeypot anti-spam, sanitización de inputs y API route `/api/contact`
+- **Seguridad:** Formulario con honeypot anti-spam, sanitización de inputs y API routes `/api/contact` y `/api/chat`
 
 ---
 
-## 💻 5. Puesta en Marcha Local
+## 💻 6. Puesta en Marcha Local
 
 ### Prerrequisitos
 - Node.js >= 18.17 (Recomendado Node 20 o 22)

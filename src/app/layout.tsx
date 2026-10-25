@@ -5,6 +5,7 @@ import CyberBackground from "@/components/CyberBackground";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
+import AIAgentChatModal from "@/components/AIAgentChatModal";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sarriatech.tech"),
@@ -114,6 +115,7 @@ export default function RootLayout({
           <main className="relative z-10">{children}</main>
           <Footer />
           <WhatsAppFloatingButton />
+          <AIAgentChatModal />
         </LanguageProvider>
       </body>
     </html>

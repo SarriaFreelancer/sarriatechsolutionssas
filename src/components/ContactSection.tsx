@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
 import { useLanguage } from "@/context/LanguageContext";
+import LegalModal from "./LegalModal";
 import { 
   AlertCircle, 
   ArrowRight, 
@@ -36,6 +37,7 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [showLegalModal, setShowLegalModal] = useState(false);
 
   useEffect(() => {
     if (selectedService) {
@@ -492,7 +494,14 @@ export default function ContactSection() {
                       className="mt-1 h-4 w-4 rounded bg-[#080D1D] border-[#00E5FF]/40 text-[#00E5FF] focus:ring-[#00E5FF]"
                     />
                     <label htmlFor="privacyAccepted" className="text-xs text-[#A8B3D1] leading-relaxed cursor-pointer">
-                      {t.contact.form.privacyText}
+                      {t.contact.form.privacyText}{" "}
+                      <button
+                        type="button"
+                        onClick={() => setShowLegalModal(true)}
+                        className="text-[#00E5FF] underline font-semibold hover:text-white"
+                      >
+                        (Ver política de tratamiento)
+                      </button>
                     </label>
                   </div>
 
@@ -536,6 +545,12 @@ export default function ContactSection() {
         </div>
 
       </div>
+
+      <LegalModal
+        isOpen={showLegalModal}
+        onClose={() => setShowLegalModal(false)}
+        initialDoc="dataTreatment"
+      />
     </section>
   );
 }

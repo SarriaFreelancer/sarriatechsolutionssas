@@ -18,6 +18,12 @@ import {
 export default function AutomationSection() {
   const { t, scrollToContactWithService } = useLanguage();
 
+  const openAIChat = () => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("open-sarriatech-ai-chat"));
+    }
+  };
+
   const caseIcons = [
     <MessageCircle key="msg" className="w-6 h-6 text-[#39FF72]" />,
     <Workflow key="wf" className="w-6 h-6 text-[#00E5FF]" />,
@@ -131,12 +137,21 @@ export default function AutomationSection() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="text-center mt-14">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-14">
+          <button
+            type="button"
+            onClick={openAIChat}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl font-bold text-base text-white bg-[#03040B] border-2 border-[#00E5FF] shadow-[0_0_25px_rgba(0,229,255,0.4)] hover:shadow-[0_0_35px_rgba(0,229,255,0.7)] hover:bg-[#00E5FF]/10 transition-all duration-300 transform hover:scale-105"
+          >
+            <Bot className="w-5 h-5 text-[#00E5FF] animate-bounce" />
+            <span>Probar Agente IA en vivo (Gemini)</span>
+          </button>
+
           <button
             type="button"
             onClick={() => scrollToContactWithService("Automatización de Procesos & Agentes IA")}
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-base text-white bg-gradient-to-r from-[#00E5FF] via-[#145CFF] to-[#8B3DFF] hover:from-[#39FF72] hover:to-[#00E5FF] shadow-[0_0_25px_rgba(0,229,255,0.5)] hover:shadow-[0_0_35px_rgba(57,255,114,0.6)] transition-all duration-300 transform hover:scale-105"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-base text-white bg-gradient-to-r from-[#00E5FF] via-[#145CFF] to-[#8B3DFF] hover:from-[#39FF72] hover:to-[#00E5FF] shadow-[0_0_25px_rgba(0,229,255,0.5)] hover:shadow-[0_0_35px_rgba(57,255,114,0.6)] transition-all duration-300 transform hover:scale-105"
           >
             <Zap className="w-5 h-5 text-white" />
             <span>{t.automation.cta}</span>
