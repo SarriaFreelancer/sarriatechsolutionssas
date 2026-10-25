@@ -179,6 +179,19 @@ html.light .btn-gradient {
   color: #FFFFFF !important;
 }
 
+/* Header CTA Button in Light Mode */
+html.light header a[href="#contacto"],
+html.light header a[href="#contacto"]:hover {
+  background-image: linear-gradient(to right, #145CFF, #00B4D8, #8B3DFF) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 18px rgba(20, 92, 255, 0.35) !important;
+}
+
+html.light header a[href="#contacto"] span,
+html.light header a[href="#contacto"] svg {
+  color: #FFFFFF !important;
+}
+
 /* Explicit high-contrast styling for Hero Dashboard title, prices and metrics */
 html.light .hero-dashboard-title {
   color: #0A0F1D !important;

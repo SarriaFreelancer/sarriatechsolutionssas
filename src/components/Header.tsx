@@ -133,19 +133,10 @@ export default function Header() {
             {/* Glowing CTA Button */}
             <a
               href="#contacto"
-              className="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white overflow-hidden transition-all duration-300 transform hover:scale-[1.03] active:scale-95 shadow-[0_0_20px_rgba(20,92,255,0.45)] hover:shadow-[0_0_30px_rgba(0,229,255,0.7)]"
+              className="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white overflow-hidden transition-all duration-300 transform hover:scale-[1.03] active:scale-95 bg-gradient-to-r from-[#145CFF] via-[#00E5FF] to-[#8B3DFF] hover:from-[#00E5FF] hover:to-[#FF28D7] shadow-[0_0_20px_rgba(20,92,255,0.45)] hover:shadow-[0_0_30px_rgba(0,229,255,0.7)]"
             >
-              {/* Animated gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#145CFF] via-[#00E5FF] to-[#8B3DFF] group-hover:from-[#00E5FF] group-hover:to-[#FF28D7] transition-all duration-500" />
-              
-              {/* Inner dark overlay */}
-              <div className="absolute inset-[1px] bg-[#080D1D]/75 rounded-[11px] transition-all group-hover:bg-[#080D1D]/50" />
-              
-              {/* Content */}
-              <span className="relative z-10 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#00E5FF] animate-pulse" />
-                <span>{t.nav.talkCta}</span>
-              </span>
+              <Sparkles className="w-4 h-4 text-white animate-pulse" />
+              <span className="text-white font-bold">{t.nav.talkCta}</span>
             </a>
           </div>
 
