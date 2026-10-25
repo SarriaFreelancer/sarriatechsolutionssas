@@ -165,16 +165,33 @@ html.light [class*="group-hover:text-white"]:hover {
   color: #145CFF !important;
 }
 
-/* Keep white text on gradient CTAs and primary colored buttons */
+/* Keep white text strictly on gradient CTA buttons, primary buttons and badges */
+html.light a.bg-gradient-to-r,
 html.light a[class*="bg-gradient"],
+html.light button.bg-gradient-to-r,
 html.light button[class*="bg-gradient"],
-html.light [class*="bg-gradient"] .text-white,
-html.light [class*="bg-gradient"] span,
-html.light [class*="from-[#145CFF]"] span,
-html.light [class*="from-[#145CFF]"],
-html.light [class*="from-[#39FF72]"] span,
+html.light a[class*="bg-gradient"] > span,
+html.light button[class*="bg-gradient"] > span,
+html.light a[class*="from-[#145CFF]"] span,
+html.light button[class*="from-[#145CFF]"] span,
+html.light a[href="#contacto"] span,
 html.light .btn-gradient {
   color: #FFFFFF !important;
+}
+
+/* Explicit high-contrast styling for Hero Dashboard title, prices and metrics */
+html.light .hero-dashboard-title {
+  color: #0A0F1D !important;
+}
+
+html.light .hero-metric-price {
+  color: #0A0F1D !important;
+  font-weight: 900 !important;
+}
+
+html.light .hero-metric-val {
+  color: #0A0F1D !important;
+  font-weight: 900 !important;
 }
 
 html.light [class*="text-[#F7FAFF]"] {

@@ -88,7 +88,7 @@ export default function HeroVisual() {
         </div>
 
         {/* Window Content */}
-        <div className="p-4 sm:p-6 bg-gradient-to-b from-[#080D1D] to-[#03040B] min-h-[340px]">
+        <div className="p-4 sm:p-6 bg-[#080D1D] min-h-[340px]">
           {activeTab === "dashboard" && (
             <div className="space-y-4 animate-in fade-in duration-300">
               {/* Header metrics bar */}
@@ -101,7 +101,7 @@ export default function HeroVisual() {
                     </span>
                     <span className="text-xs text-[#A8B3D1] font-mono">Cluster Bogotá · Latencia 14ms</span>
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold text-white mt-1">
+                  <h3 className="hero-dashboard-title text-base sm:text-lg font-bold text-white mt-1">
                     Control Operativo &amp; Métricas en Tiempo Real
                   </h3>
                 </div>
@@ -123,7 +123,7 @@ export default function HeroVisual() {
                     <span>Transacciones</span>
                     <TrendingUp className="w-3.5 h-3.5 text-[#39FF72]" />
                   </div>
-                  <div className="text-lg sm:text-2xl font-black text-white font-mono mt-1">
+                  <div className="hero-metric-price text-lg sm:text-2xl font-black text-white font-mono mt-1">
                     ${(salesMetric * 100).toLocaleString("es-CO")}
                   </div>
                   <div className="text-[10px] text-[#39FF72] font-mono mt-0.5">+24.8% hoy</div>
@@ -134,7 +134,7 @@ export default function HeroVisual() {
                     <span>IA Queries</span>
                     <Bot className="w-3.5 h-3.5 text-[#00E5FF]" />
                   </div>
-                  <div className="text-lg sm:text-2xl font-black text-white font-mono mt-1">
+                  <div className="hero-metric-val text-lg sm:text-2xl font-black text-white font-mono mt-1">
                     {(salesMetric / 8).toFixed(0)}
                   </div>
                   <div className="text-[10px] text-[#00E5FF] font-mono mt-0.5">Respuestas WhatsApp</div>
@@ -145,7 +145,7 @@ export default function HeroVisual() {
                     <span>Uptime SLA</span>
                     <Activity className="w-3.5 h-3.5 text-[#FF28D7]" />
                   </div>
-                  <div className="text-lg sm:text-2xl font-black text-white font-mono mt-1">
+                  <div className="hero-metric-val text-lg sm:text-2xl font-black text-white font-mono mt-1">
                     99.98%
                   </div>
                   <div className="text-[10px] text-[#FF28D7] font-mono mt-0.5">0 fallos críticos</div>
@@ -298,7 +298,7 @@ export default function HeroVisual() {
         </div>
 
         {/* Screen */}
-        <div className="rounded-2xl bg-gradient-to-b from-[#0B1025] to-[#03040B] p-3 border border-[#00E5FF]/20 space-y-2">
+        <div className="rounded-2xl bg-[#0B1025] p-3 border border-[#00E5FF]/20 space-y-2">
           {/* Logo header inside phone */}
           <div className="flex items-center justify-between text-[11px] font-bold text-white border-b border-[#00E5FF]/15 pb-1.5">
             <span className="flex items-center gap-1">
