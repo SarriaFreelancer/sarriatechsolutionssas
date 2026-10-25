@@ -39,13 +39,48 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "#inicio", label: t.nav.home, id: "inicio" },
-    { href: "#productos", label: t.nav.products, id: "productos" },
-    { href: "#servicios", label: t.nav.services, id: "servicios" },
-    { href: "#automatizacion", label: t.nav.automation, id: "automatizacion" },
-    { href: "#metodologia", label: t.nav.methodology, id: "metodologia" },
-    { href: "#nosotros", label: t.nav.about, id: "nosotros" },
-    { href: "#contacto", label: t.nav.contact, id: "contacto" },
+    { 
+      href: "#inicio", 
+      label: t.nav.home, 
+      id: "inicio",
+      seoTitle: "SarriaTech Solutions - Desarrollo de Software, Automatización e Inteligencia Artificial"
+    },
+    { 
+      href: "#productos", 
+      label: t.nav.products, 
+      id: "productos",
+      seoTitle: "Plataformas Propias: GNS ERP Inventarios, Nexus Software, VCA Villa Rica"
+    },
+    { 
+      href: "#servicios", 
+      label: t.nav.services, 
+      id: "servicios",
+      seoTitle: "Servicios de Desarrollo de Software a Medida, Web, Analítica y APIs en Colombia"
+    },
+    { 
+      href: "#automatizacion", 
+      label: t.nav.automation, 
+      id: "automatizacion",
+      seoTitle: "Automatización de Procesos RPA y Agentes de Inteligencia Artificial para WhatsApp"
+    },
+    { 
+      href: "#metodologia", 
+      label: t.nav.methodology, 
+      id: "metodologia",
+      seoTitle: "Metodología de Ingeniería de Software Ágil y Calidad Tecnológica"
+    },
+    { 
+      href: "#nosotros", 
+      label: t.nav.about, 
+      id: "nosotros",
+      seoTitle: "Sobre SarriaTech Solutions S.A.S. - Empresa de Tecnología y Software en Colombia"
+    },
+    { 
+      href: "#contacto", 
+      label: t.nav.contact, 
+      id: "contacto",
+      seoTitle: "Contactar a SarriaTech Solutions - Cotizar Proyectos de Software e Inteligencia Artificial"
+    },
   ];
 
   return (
@@ -69,6 +104,7 @@ export default function Header() {
                 <a
                   key={link.href}
                   href={link.href}
+                  title={link.seoTitle}
                   className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md ${
                     isActive
                       ? "text-[#00E5FF] font-semibold"
@@ -133,6 +169,7 @@ export default function Header() {
             {/* Glowing CTA Button */}
             <a
               href="#contacto"
+              title="Hablemos de tu proyecto - Cotización de software y automatización con SarriaTech Solutions S.A.S."
               className="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white overflow-hidden transition-all duration-300 transform hover:scale-[1.03] active:scale-95 bg-gradient-to-r from-[#145CFF] via-[#00E5FF] to-[#8B3DFF] hover:from-[#00E5FF] hover:to-[#FF28D7] shadow-[0_0_20px_rgba(20,92,255,0.45)] hover:shadow-[0_0_30px_rgba(0,229,255,0.7)]"
             >
               <MessageSquare className="w-4 h-4 text-white" />
@@ -183,6 +220,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
+                title={link.seoTitle}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between ${
                   activeSection === link.id
