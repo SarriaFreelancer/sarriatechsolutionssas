@@ -29,9 +29,11 @@ Inspirada directamente en la identidad visual de la empresa:
    - Módulos verificados: Control de inventarios, gestión de productos, ventas POS, proveedores, compras y analítica multi-usuario.
    - Mockup con indicadores reales ($533.120.000 valor inventario, 2.808 unidades de stock).
 2. **NEXUS — Gestión de Proyectos de Software:**
+   - URL en vivo: [https://nexus.sarriatech.tech/](https://nexus.sarriatech.tech/) (*SarriaTech Studio | Nexus Enterprise Platform*)
    - Solución operativa para equipos de ingeniería, sprints ágiles, tableros Kanban, seguimiento de entregables y gestión de clientes.
 3. **VCA VILLA RICA — Sistema de Analítica:**
-   - Plataforma de Business Intelligence con visualización gráfica interactiva y filtros por períodos para toma de decisiones gerenciales con datos seguros.
+   - URL en vivo: [https://encuestas.sarriatech.tech/](https://encuestas.sarriatech.tech/)
+   - Plataforma de Business Intelligence y encuestas con visualización gráfica interactiva y filtros por períodos para toma de decisiones gerenciales.
 
 ---
 

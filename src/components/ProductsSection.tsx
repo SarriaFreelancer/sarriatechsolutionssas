@@ -291,8 +291,16 @@ export default function ProductsSection() {
                     </div>
 
                     <div className="mt-3 pt-2 border-t border-[#8B3DFF]/15 flex items-center justify-between text-[10px] font-mono text-[#A8B3D1]">
-                      <span>Gestión de Colaboradores, Entregables y Auditoría</span>
-                      <span className="text-[#8B3DFF] font-bold">NEXUS Dev Core</span>
+                      <a
+                        href="https://nexus.sarriatech.tech/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#FF28D7] hover:underline flex items-center gap-1 font-semibold"
+                      >
+                        <span>https://nexus.sarriatech.tech/</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                      <span className="text-[#8B3DFF] font-bold">SarriaTech Studio</span>
                     </div>
 
                   </div>
@@ -306,7 +314,8 @@ export default function ProductsSection() {
                   <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#8B3DFF]/20 text-[#FF28D7] border border-[#8B3DFF]/30">
                     {t.products.nexus.category}
                   </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-mono text-[#8B3DFF] bg-[#8B3DFF]/15 border border-[#8B3DFF]/30">
+                  <span className="px-3 py-1 rounded-full text-xs font-mono text-[#39FF72] bg-[#39FF72]/15 border border-[#39FF72]/30 flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#39FF72] animate-ping" />
                     {t.products.nexus.badge}
                   </span>
                 </div>
@@ -321,9 +330,14 @@ export default function ProductsSection() {
                       className="object-contain"
                     />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-black text-white">
-                    {t.products.nexus.name}
-                  </h3>
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-black text-white">
+                      {t.products.nexus.name}
+                    </h3>
+                    <p className="text-xs font-mono text-[#8B3DFF] mt-0.5">
+                      SarriaTech Studio | Nexus Enterprise Platform
+                    </p>
+                  </div>
                 </div>
 
                 <p className="text-sm sm:text-base text-[#A8B3D1] leading-relaxed">
@@ -342,13 +356,23 @@ export default function ProductsSection() {
 
                 {/* Buttons */}
                 <div className="flex flex-wrap items-center gap-4 pt-3">
+                  <a
+                    href="https://nexus.sarriatech.tech/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#8B3DFF] via-[#FF28D7] to-[#145CFF] text-white font-bold text-sm shadow-[0_0_20px_rgba(139,61,255,0.4)] hover:shadow-[0_0_25px_rgba(255,40,215,0.7)] hover:scale-105 transition-all"
+                  >
+                    <span>{t.products.nexus.cta}</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
+
                   <button
                     type="button"
                     onClick={() => scrollToContactWithService("NEXUS — Plataforma de Gestión de Proyectos")}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#8B3DFF] to-[#FF28D7] text-white font-bold text-sm shadow-[0_0_20px_rgba(139,61,255,0.4)] hover:shadow-[0_0_25px_rgba(255,40,215,0.7)] hover:scale-105 transition-all"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0B1025] hover:bg-[#03040B] text-[#F7FAFF] border border-[#8B3DFF]/40 text-sm font-semibold transition-all hover:border-[#8B3DFF]"
                   >
                     <span>{t.products.nexus.demo}</span>
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="w-4 h-4 text-[#8B3DFF]" />
                   </button>
                 </div>
               </div>
@@ -402,13 +426,23 @@ export default function ProductsSection() {
 
                 {/* Buttons */}
                 <div className="flex flex-wrap items-center gap-4 pt-3">
+                  <a
+                    href="https://encuestas.sarriatech.tech/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#00E5FF] via-[#145CFF] to-[#39FF72] text-white font-bold text-sm shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(20,92,255,0.7)] hover:scale-105 transition-all"
+                  >
+                    <span>{t.products.vca.cta}</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
+
                   <button
                     type="button"
                     onClick={() => scrollToContactWithService("VCA VILLA RICA — Solución de Analítica y BI")}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#00E5FF] to-[#145CFF] text-white font-bold text-sm shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(20,92,255,0.7)] hover:scale-105 transition-all"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0B1025] hover:bg-[#03040B] text-[#F7FAFF] border border-[#00E5FF]/40 text-sm font-semibold transition-all hover:border-[#00E5FF]"
                   >
                     <span>{t.products.vca.demo}</span>
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="w-4 h-4 text-[#00E5FF]" />
                   </button>
                 </div>
               </div>
@@ -485,8 +519,17 @@ export default function ProductsSection() {
                       </div>
                     </div>
 
-                    <div className="text-[10px] text-center text-[#A8B3D1]/70">
-                      * Vista interactiva para toma de decisiones gerenciales con indicadores seguros.
+                    <div className="flex items-center justify-between text-[11px] text-[#A8B3D1] pt-1">
+                      <a
+                        href="https://encuestas.sarriatech.tech/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#00E5FF] hover:underline flex items-center gap-1 font-mono font-semibold"
+                      >
+                        <span>https://encuestas.sarriatech.tech/</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                      <span className="text-[#39FF72] font-semibold">Sistema en Producción</span>
                     </div>
 
                   </div>

@@ -62,7 +62,7 @@ export const translations = {
         category: "Gestión & Operaciones Dev",
         name: "NEXUS — Gestión de Proyectos de Software",
         description:
-          "Solución orientada a organizar proyectos, tareas, clientes y actividades operativas relacionadas con el ciclo de vida del desarrollo de software.",
+          "Solución orientada a organizar proyectos, tareas, clientes y actividades operativas relacionadas con el ciclo de vida del desarrollo de software. Plataforma empresarial de SarriaTech Studio.",
         features: [
           "Seguimiento visual de proyectos y sprints",
           "Gestión de tareas y estados con tableros Kanban",
@@ -70,9 +70,10 @@ export const translations = {
           "Seguimiento de entregables y cronogramas",
           "Centralización de información técnica",
         ],
-        cta: "Conocer NEXUS",
+        cta: "Explorar NEXUS",
         demo: "Solicitar demo de NEXUS",
-        badge: "Solución Especializada",
+        url: "https://nexus.sarriatech.tech/",
+        badge: "Plataforma en Producción",
       },
       vca: {
         category: "Business Intelligence",
@@ -85,9 +86,10 @@ export const translations = {
           "Interpretación gráfica de tendencias y rendimiento",
           "Demostración visual con datos analíticos seguros",
         ],
-        cta: "Consultar Analítica",
+        cta: "Explorar VCA VILLA RICA",
         demo: "Solicitar asesoría en datos",
-        badge: "Business Intelligence",
+        url: "https://encuestas.sarriatech.tech/",
+        badge: "Sistema en Producción",
       },
     },
     services: {
@@ -407,7 +409,7 @@ export const translations = {
         category: "DevOps & Project Operations",
         name: "NEXUS — Software Project Management",
         description:
-          "Purpose-built platform to organize projects, tasks, clients, and technical activities throughout the software development lifecycle.",
+          "Purpose-built platform to organize projects, tasks, clients, and technical activities throughout the software development lifecycle. SarriaTech Studio | Nexus Enterprise Platform.",
         features: [
           "Visual project & sprint tracking",
           "Task and status management with Kanban boards",
@@ -417,7 +419,8 @@ export const translations = {
         ],
         cta: "Explore NEXUS",
         demo: "Request NEXUS Demo",
-        badge: "Specialized Solution",
+        url: "https://nexus.sarriatech.tech/",
+        badge: "Live in Production",
       },
       vca: {
         category: "Business Intelligence",
@@ -430,9 +433,10 @@ export const translations = {
           "Clear graphic trend and performance indicators",
           "Visual interactive showcase with secure data",
         ],
-        cta: "Inspect Analytics",
+        cta: "Explore VCA VILLA RICA",
         demo: "Request Data Consultation",
-        badge: "Business Intelligence",
+        url: "https://encuestas.sarriatech.tech/",
+        badge: "Live in Production",
       },
     },
     services: {

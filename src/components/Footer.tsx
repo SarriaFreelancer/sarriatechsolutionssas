@@ -63,18 +63,24 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#productos"
-                  className="hover:text-white transition-colors"
+                  href="https://nexus.sarriatech.tech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors flex items-center justify-between"
                 >
-                  NEXUS — Project DevOps
+                  <span>NEXUS — Project DevOps</span>
+                  <span className="text-[10px] font-mono text-[#39FF72]">En vivo</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="#productos"
-                  className="hover:text-white transition-colors"
+                  href="https://encuestas.sarriatech.tech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors flex items-center justify-between"
                 >
-                  VCA VILLA RICA — Analítica
+                  <span>VCA VILLA RICA — Analítica</span>
+                  <span className="text-[10px] font-mono text-[#39FF72]">En vivo</span>
                 </a>
               </li>
               <li>
