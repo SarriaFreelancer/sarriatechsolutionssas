@@ -5,7 +5,6 @@ import { useLanguage } from "@/context/LanguageContext";
 import { 
   Calculator, 
   Check, 
-  Sparkles, 
   ArrowRight, 
   Phone, 
   Layers, 

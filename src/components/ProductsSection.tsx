@@ -17,7 +17,6 @@ import {
   PieChart, 
   Play, 
   ShieldCheck, 
-  Sparkles, 
   Users 
 } from "lucide-react";
 

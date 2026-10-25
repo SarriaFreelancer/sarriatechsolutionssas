@@ -11,7 +11,6 @@ import {
   LineChart, 
   Network, 
   Server, 
-  Sparkles, 
   Terminal 
 } from "lucide-react";
 

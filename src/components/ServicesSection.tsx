@@ -7,18 +7,19 @@ import {
   BarChart3, 
   Bot, 
   Briefcase, 
+  CheckCircle2, 
   Cpu, 
   GraduationCap, 
   Headphones, 
+  Layers, 
   Layout, 
   Monitor, 
   Network, 
   Rocket, 
   ShieldCheck, 
-  Sparkles, 
   UserCheck, 
-  Wrench, 
-  Zap 
+  Workflow, 
+  Wrench 
 } from "lucide-react";
 
 interface ServiceConfig {
@@ -68,7 +69,7 @@ export default function ServicesSection() {
     {
       id: "automatizacion-procesos",
       nameKey: "processAutomation",
-      icon: <Zap className="w-8 h-8 text-[#00E5FF]" />,
+      icon: <Workflow className="w-8 h-8 text-[#00E5FF]" />,
       colorBorder: "border-[#00E5FF]/50 hover:border-[#00E5FF]",
       glowClass: "hover:shadow-[0_0_30px_rgba(0,229,255,0.4)]",
     },
@@ -140,7 +141,7 @@ export default function ServicesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#080D1D] border border-[#00E5FF]/30 text-xs font-mono font-semibold text-[#00E5FF] mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Layers className="w-3.5 h-3.5" />
             <span>{t.services.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
@@ -164,7 +165,7 @@ export default function ServicesSection() {
                 {/* Glow accent pill when featured */}
                 {srv.isFeatured && (
                   <div className="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-gradient-to-r from-[#145CFF] to-[#00E5FF] text-[11px] font-mono font-bold text-white shadow-[0_0_15px_rgba(0,229,255,0.7)] flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-[#39FF72]" />
+                    <CheckCircle2 className="w-3 h-3 text-[#39FF72]" />
                     <span>{srv.badge}</span>
                   </div>
                 )}

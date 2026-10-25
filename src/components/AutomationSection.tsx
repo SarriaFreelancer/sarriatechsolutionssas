@@ -10,9 +10,7 @@ import {
   Database, 
   MessageCircle, 
   Network, 
-  Sparkles, 
-  Workflow, 
-  Zap 
+  Workflow 
 } from "lucide-react";
 
 export default function AutomationSection() {
@@ -47,7 +45,7 @@ export default function AutomationSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#03040B] border border-[#00E5FF]/40 text-xs font-mono font-semibold text-[#00E5FF] mb-4">
-            <Zap className="w-3.5 h-3.5 text-[#00E5FF]" />
+            <Workflow className="w-3.5 h-3.5 text-[#00E5FF]" />
             <span>{t.automation.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
@@ -64,7 +62,7 @@ export default function AutomationSection() {
         <div className="mb-20 p-6 sm:p-8 rounded-3xl bg-[#03040B]/90 border border-[#00E5FF]/30 shadow-[0_0_35px_rgba(0,229,255,0.15)] backdrop-blur-xl">
           <div className="text-center mb-8">
             <h3 className="text-lg sm:text-xl font-bold font-mono text-white flex items-center justify-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#00E5FF]" />
+              <Bot className="w-4 h-4 text-[#00E5FF]" />
               <span>{t.automation.flowTitle}</span>
             </h3>
           </div>
@@ -153,7 +151,7 @@ export default function AutomationSection() {
             onClick={() => scrollToContactWithService("Automatización de Procesos & Agentes IA")}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-base text-white bg-gradient-to-r from-[#00E5FF] via-[#145CFF] to-[#8B3DFF] hover:from-[#39FF72] hover:to-[#00E5FF] shadow-[0_0_25px_rgba(0,229,255,0.5)] hover:shadow-[0_0_35px_rgba(57,255,114,0.6)] transition-all duration-300 transform hover:scale-105"
           >
-            <Zap className="w-5 h-5 text-white" />
+            <Workflow className="w-5 h-5 text-white" />
             <span>{t.automation.cta}</span>
           </button>
         </div>

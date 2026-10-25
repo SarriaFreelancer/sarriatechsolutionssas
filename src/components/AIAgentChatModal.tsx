@@ -5,7 +5,6 @@ import {
   Bot, 
   Send, 
   X, 
-  Sparkles, 
   Phone, 
   User, 
   RotateCcw, 

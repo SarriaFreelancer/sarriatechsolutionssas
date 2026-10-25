@@ -13,8 +13,7 @@ import {
   MessageSquare, 
   Phone, 
   Send, 
-  ShieldCheck, 
-  Sparkles 
+  ShieldCheck 
 } from "lucide-react";
 
 export default function ContactSection() {

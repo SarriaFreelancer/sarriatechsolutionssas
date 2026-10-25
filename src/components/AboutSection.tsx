@@ -9,10 +9,8 @@ import {
   Compass, 
   Lightbulb, 
   ShieldCheck, 
-  Sparkles, 
   Target, 
-  TrendingUp, 
-  Zap 
+  TrendingUp 
 } from "lucide-react";
 
 export default function AboutSection() {

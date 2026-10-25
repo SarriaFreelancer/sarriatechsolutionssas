@@ -7,7 +7,6 @@ import {
   HelpCircle, 
   MessageSquare, 
   Phone, 
-  Sparkles, 
   ShieldCheck, 
   Code2 
 } from "lucide-react";

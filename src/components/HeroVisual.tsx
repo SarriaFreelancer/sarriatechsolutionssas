@@ -19,10 +19,8 @@ import {
   Server, 
   ShieldCheck, 
   Smartphone, 
-  Sparkles, 
   Terminal, 
-  TrendingUp, 
-  Zap 
+  TrendingUp 
 } from "lucide-react";
 
 export default function HeroVisual() {
@@ -70,7 +68,7 @@ export default function HeroVisual() {
                   : "text-[#A8B3D1] hover:text-white"
               }`}
             >
-              <Zap className="w-3 h-3" />
+              <Bot className="w-3 h-3" />
               <span className="hidden sm:inline">IA & Flows</span>
             </button>
             <button

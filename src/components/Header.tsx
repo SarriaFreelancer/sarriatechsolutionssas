@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import SarriaTechLogo from "./SarriaTechLogo";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import { Menu, X, Globe, Sparkles, MessageSquare, Sun, Moon } from "lucide-react";
+import { Menu, X, Globe, MessageSquare, Sun, Moon } from "lucide-react";
 
 export default function Header() {
   const { t, lang, setLang } = useLanguage();
@@ -135,7 +135,7 @@ export default function Header() {
               href="#contacto"
               className="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white overflow-hidden transition-all duration-300 transform hover:scale-[1.03] active:scale-95 bg-gradient-to-r from-[#145CFF] via-[#00E5FF] to-[#8B3DFF] hover:from-[#00E5FF] hover:to-[#FF28D7] shadow-[0_0_20px_rgba(20,92,255,0.45)] hover:shadow-[0_0_30px_rgba(0,229,255,0.7)]"
             >
-              <Sparkles className="w-4 h-4 text-white animate-pulse" />
+              <MessageSquare className="w-4 h-4 text-white" />
               <span className="text-white font-bold">{t.nav.talkCta}</span>
             </a>
           </div>

@@ -10,8 +10,7 @@ import {
   Database, 
   Layers, 
   ShieldCheck, 
-  Sparkles, 
-  Zap 
+  Workflow 
 } from "lucide-react";
 
 export default function Hero() {
@@ -19,7 +18,7 @@ export default function Hero() {
 
   const capabilityIcons = [
     <Code2 key="code" className="w-4 h-4 text-[#00E5FF]" />,
-    <Zap key="zap" className="w-4 h-4 text-[#145CFF]" />,
+    <Workflow key="wf" className="w-4 h-4 text-[#145CFF]" />,
     <Cpu key="cpu" className="w-4 h-4 text-[#8B3DFF]" />,
     <Database key="db" className="w-4 h-4 text-[#FF28D7]" />,
   ];

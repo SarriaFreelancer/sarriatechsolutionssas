@@ -8,8 +8,7 @@ import {
   Compass, 
   Layers, 
   PenTool, 
-  Rocket, 
-  Sparkles 
+  Rocket 
 } from "lucide-react";
 
 export default function MethodologySection() {
@@ -37,7 +36,7 @@ export default function MethodologySection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#080D1D] border border-[#00E5FF]/30 text-xs font-mono font-semibold text-[#00E5FF] mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Layers className="w-3.5 h-3.5" />
             <span>{t.methodology.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
