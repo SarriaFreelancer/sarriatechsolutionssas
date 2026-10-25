@@ -114,7 +114,7 @@ export default function FAQSection() {
         style={{ background: "radial-gradient(circle, #00E5FF 0%, #145CFF 50%, transparent 70%)" }}
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 2xl:px-12 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-16">

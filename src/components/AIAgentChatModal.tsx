@@ -159,7 +159,7 @@ export default function AIAgentChatModal() {
                 <h4 className="text-sm font-bold text-white flex items-center gap-1.5 leading-none">
                   <span>SarriaTech AI</span>
                   <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-[#00E5FF]/20 text-[#00E5FF] border border-[#00E5FF]/30">
-                    Gemini 2.0
+                    Gemini AI
                   </span>
                 </h4>
                 <p className="text-[10px] font-mono text-[#39FF72] mt-1 flex items-center gap-1">

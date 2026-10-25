@@ -61,56 +61,42 @@ export async function POST(request: Request) {
           parts: [{ text: m.content }],
         }));
 
-        const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              systemInstruction: {
-                parts: [{ text: SYSTEM_INSTRUCTION }],
-              },
-              contents: contents,
-              generationConfig: {
-                temperature: 0.7,
-                maxOutputTokens: 600,
-              },
-            }),
-          }
-        );
+        const candidateModels = ["gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-flash-latest"];
+        
+        for (const model of candidateModels) {
+          try {
+            const response = await fetch(
+              `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  systemInstruction: {
+                    parts: [{ text: SYSTEM_INSTRUCTION }],
+                  },
+                  contents: contents,
+                  generationConfig: {
+                    temperature: 0.7,
+                    maxOutputTokens: 600,
+                  },
+                }),
+              }
+            );
 
-        if (response.ok) {
-          const data = await response.json();
-          const aiReply =
-            data?.candidates?.[0]?.content?.parts?.[0]?.text || null;
-
-          if (aiReply) {
-            return NextResponse.json({ reply: aiReply, provider: "gemini" });
-          }
-        } else {
-          // If 2.0-flash failed, try gemini-1.5-flash as fallback
-          const fallbackRes = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
-                contents: contents,
-                generationConfig: { temperature: 0.7, maxOutputTokens: 600 },
-              }),
+            if (response.ok) {
+              const data = await response.json();
+              const aiReply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+              if (aiReply) {
+                return NextResponse.json({ reply: aiReply, provider: model });
+              }
+            } else {
+              const errBody = await response.text();
+              console.warn(`[Gemini API ${model} failed]:`, response.status, errBody);
             }
-          );
-
-          if (fallbackRes.ok) {
-            const fbData = await fallbackRes.json();
-            const fbReply =
-              fbData?.candidates?.[0]?.content?.parts?.[0]?.text || null;
-            if (fbReply) {
-              return NextResponse.json({ reply: fbReply, provider: "gemini-fallback" });
-            }
+          } catch (modelErr) {
+            console.warn(`[Gemini API ${model} request error]:`, modelErr);
           }
         }
       } catch (geminiErr) {

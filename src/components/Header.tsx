@@ -3,10 +3,12 @@
 import React, { useState, useEffect } from "react";
 import SarriaTechLogo from "./SarriaTechLogo";
 import { useLanguage } from "@/context/LanguageContext";
-import { Menu, X, Globe, Sparkles, MessageSquare } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
+import { Menu, X, Globe, Sparkles, MessageSquare, Sun, Moon } from "lucide-react";
 
 export default function Header() {
   const { t, lang, setLang } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("inicio");
@@ -54,7 +56,7 @@ export default function Header() {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-10 2xl:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <SarriaTechLogo size="md" showTagline={false} />
@@ -82,8 +84,23 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Right Controls: Language Selector & CTA */}
-          <div className="hidden sm:flex items-center space-x-4">
+          {/* Right Controls: Theme Toggle, Language Selector & CTA */}
+          <div className="hidden sm:flex items-center space-x-3 lg:space-x-4">
+            {/* Theme Toggle (Dark / Light) */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="p-2 rounded-lg bg-[#0B1025] text-[#00E5FF] border border-[#00E5FF]/20 hover:border-[#00E5FF]/60 hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all duration-200"
+              title={theme === "dark" ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro"}
+              aria-label="Alternar tema de color"
+            >
+              {theme === "dark" ? (
+                <Sun className="w-4 h-4 text-[#FFC247] hover:rotate-45 transition-transform" />
+              ) : (
+                <Moon className="w-4 h-4 text-[#00E5FF] hover:-rotate-12 transition-transform" />
+              )}
+            </button>
+
             {/* Language toggle */}
             <div className="flex items-center bg-[#0B1025] p-1 rounded-lg border border-[#00E5FF]/20">
               <Globe className="w-3.5 h-3.5 text-[#00E5FF] ml-1.5 mr-1" />
@@ -134,6 +151,16 @@ export default function Header() {
 
           {/* Mobile menu trigger */}
           <div className="flex items-center space-x-2 lg:hidden">
+            {/* Mobile theme toggle */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="p-1.5 rounded-lg bg-[#0B1025] text-[#00E5FF] border border-[#00E5FF]/30"
+              aria-label="Alternar tema de color"
+            >
+              {theme === "dark" ? <Sun className="w-4 h-4 text-[#FFC247]" /> : <Moon className="w-4 h-4 text-[#00E5FF]" />}
+            </button>
+
             {/* Mobile language switch */}
             <button
               type="button"

@@ -148,7 +148,7 @@ export default function ContactSection() {
         style={{ background: "radial-gradient(circle, #8B3DFF 0%, #FF28D7 50%, transparent 70%)" }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1600px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-10 2xl:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { ThemeProvider } from "@/context/ThemeContext";
+import SecurityProvider from "@/components/SecurityProvider";
 import CyberBackground from "@/components/CyberBackground";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -108,15 +110,19 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#03040B] text-[#F7FAFF] selection:bg-[#00E5FF]/20 selection:text-[#00E5FF] min-h-screen relative antialiased">
-        <LanguageProvider>
-          <CyberBackground />
-          <Header />
-          <main className="relative z-10">{children}</main>
-          <Footer />
-          <WhatsAppFloatingButton />
-          <AIAgentChatModal />
-        </LanguageProvider>
+      <body className="bg-[#03040B] text-[#F7FAFF] selection:bg-[#00E5FF]/20 selection:text-[#00E5FF] min-h-screen relative antialiased transition-colors duration-300">
+        <ThemeProvider>
+          <SecurityProvider>
+            <LanguageProvider>
+              <CyberBackground />
+              <Header />
+              <main className="relative z-10">{children}</main>
+              <Footer />
+              <WhatsAppFloatingButton />
+              <AIAgentChatModal />
+            </LanguageProvider>
+          </SecurityProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

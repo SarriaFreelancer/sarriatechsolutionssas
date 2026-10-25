@@ -29,6 +29,7 @@ html {
   scroll-behavior: smooth;
   background-color: #03040B;
   color: #F7FAFF;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -36,6 +37,86 @@ body {
   color: #F7FAFF;
   overflow-x: hidden;
   font-family: var(--font-sans);
+  /* Security & protection against text scraping */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Allow text selection inside forms & code for user inputs */
+input, textarea, select {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+}
+
+/* Light Theme Cyber Override */
+html.light {
+  background-color: #F4F7FC !important;
+  color: #0F172A !important;
+}
+
+html.light body {
+  background-color: #F4F7FC !important;
+  color: #0F172A !important;
+}
+
+html.light header {
+  background-color: rgba(244, 247, 252, 0.88) !important;
+  border-color: rgba(20, 92, 255, 0.15) !important;
+}
+
+html.light footer {
+  background-color: #EBF1FA !important;
+}
+
+html.light section {
+  background-color: transparent !important;
+}
+
+html.light .bg-\[\#03040B\] {
+  background-color: #F8FAFD !important;
+}
+
+html.light .bg-\[\#080D1D\] {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 20px -2px rgba(20, 92, 255, 0.08);
+}
+
+html.light .bg-\[\#080D1D\]\/90 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+html.light .bg-\[\#080D1D\]\/80 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+}
+
+html.light .bg-\[\#080D1D\]\/50 {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+html.light .bg-\[\#0B1025\] {
+  background-color: #F0F4FA !important;
+}
+
+html.light .bg-\[\#0B1025\]\/80 {
+  background-color: rgba(240, 244, 250, 0.9) !important;
+}
+
+html.light .text-white {
+  color: #0B1025 !important;
+}
+
+html.light .text-\[\#F7FAFF\] {
+  color: #0F172A !important;
+}
+
+html.light .text-\[\#A8B3D1\] {
+  color: #475569 !important;
+}
+
+html.light .cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(20, 92, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 92, 255, 0.08) 1px, transparent 1px);
 }
 
 /* Custom Scrollbar */
@@ -46,6 +127,10 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #03040B;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #F4F7FC;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -78,11 +163,6 @@ body {
 @keyframes float-reverse {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(10px); }
-}
-
-@keyframes scanline {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(1000%); }
 }
 
 @keyframes gradient-x {
@@ -167,17 +247,6 @@ body {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(0, 229, 255, 0.12);
-}
-
-.glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-panel-hover:hover {
-  background: rgba(11, 16, 37, 0.9);
-  border-color: rgba(0, 229, 255, 0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px -10px rgba(0, 229, 255, 0.2);
 }
 
 @media (prefers-reduced-motion: reduce) {
