@@ -26,6 +26,33 @@ export default function ProductsSection() {
   const [vcaFilter, setVcaFilter] = useState<"trimestre" | "mes" | "semana">("mes");
   const [kanbanFilter, setKanbanFilter] = useState<"todos" | "sprint" | "bugs">("todos");
 
+  const vcaDataMap = {
+    trimestre: [
+      { label: "P1", val: 55, metric: "550" },
+      { label: "P2", val: 72, metric: "720" },
+      { label: "P3", val: 86, metric: "860" },
+      { label: "P4", val: 68, metric: "680" },
+      { label: "P5", val: 94, metric: "940" },
+      { label: "P6", val: 100, metric: "1,240" },
+    ],
+    mes: [
+      { label: "S1", val: 42, metric: "180" },
+      { label: "S2", val: 65, metric: "290" },
+      { label: "S3", val: 82, metric: "350" },
+      { label: "S4", val: 58, metric: "240" },
+      { label: "S5", val: 90, metric: "390" },
+      { label: "S6", val: 98, metric: "415" },
+    ],
+    semana: [
+      { label: "Lun", val: 35, metric: "45" },
+      { label: "Mar", val: 55, metric: "68" },
+      { label: "Mié", val: 78, metric: "92" },
+      { label: "Jue", val: 62, metric: "76" },
+      { label: "Vie", val: 96, metric: "115" },
+      { label: "Sáb", val: 85, metric: "98" },
+    ],
+  };
+
   return (
     <section id="productos" className="relative py-24 sm:py-32 overflow-hidden">
       {/* Background radial accent */}
@@ -499,21 +526,40 @@ export default function ProductsSection() {
                       </div>
                     </div>
 
-                    {/* Visual BI Chart Bars */}
-                    <div className="p-3 rounded-lg bg-[#080D1D] border border-[#00E5FF]/20 space-y-2">
-                      <div className="flex items-center justify-between text-[10px] text-[#A8B3D1]">
-                        <span>Comportamiento de Operaciones (Datos Ficticios de Demostración)</span>
-                        <span className="text-[#39FF72] font-semibold">Tendencia Positiva</span>
+                    {/* Visual BI Chart Bars with Guaranteed Height & Values */}
+                    <div className="p-3.5 rounded-xl bg-[#080D1D] border border-[#00E5FF]/20 space-y-3">
+                      <div className="flex items-center justify-between text-[11px] text-[#A8B3D1]">
+                        <div className="flex items-center gap-1.5">
+                          <LineChart className="w-3.5 h-3.5 text-[#00E5FF]" />
+                          <span className="font-semibold text-white">Comportamiento de Operaciones</span>
+                        </div>
+                        <span className="text-[#39FF72] font-semibold text-[10px] bg-[#39FF72]/15 px-2 py-0.5 rounded border border-[#39FF72]/30 flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#39FF72] animate-ping" />
+                          Tendencia Positiva
+                        </span>
                       </div>
 
-                      <div className="grid grid-cols-6 gap-2 items-end h-24 pt-2">
-                        {[45, 65, 80, 55, 92, 100].map((val, idx) => (
-                          <div key={idx} className="flex flex-col items-center gap-1">
-                            <div
-                              className="w-full rounded-t bg-gradient-to-t from-[#145CFF] to-[#00E5FF] transition-all duration-500 hover:brightness-125"
-                              style={{ height: `${val}%` }}
-                            />
-                            <span className="text-[8px] text-[#A8B3D1]">P{idx + 1}</span>
+                      {/* Chart Bars Container with fixed height track */}
+                      <div className="h-28 w-full flex items-end justify-between gap-2 pt-2 px-1 border-b border-[#00E5FF]/15">
+                        {vcaDataMap[vcaFilter].map((item, idx) => (
+                          <div key={idx} className="flex-1 flex flex-col items-center justify-end h-full gap-1 group/bar">
+                            {/* Metric Value */}
+                            <span className="text-[9px] font-mono text-[#00E5FF] font-bold">
+                              {item.metric}
+                            </span>
+                            
+                            {/* Visible Bar Track and Fill */}
+                            <div className="w-full h-16 bg-[#03040B] rounded-t-md p-0.5 flex items-end border border-[#00E5FF]/20">
+                              <div
+                                className="w-full rounded-t bg-gradient-to-t from-[#145CFF] via-[#00E5FF] to-[#39FF72] transition-all duration-500 shadow-[0_0_12px_rgba(0,229,255,0.6)] group-hover/bar:brightness-125"
+                                style={{ height: `${item.val}%`, minHeight: "12px" }}
+                              />
+                            </div>
+                            
+                            {/* Label */}
+                            <span className="text-[10px] text-[#A8B3D1] font-mono font-bold mt-0.5">
+                              {item.label}
+                            </span>
                           </div>
                         ))}
                       </div>
