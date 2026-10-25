@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #03040B;
+  --color-cyber-card: #0B1025;
+  --color-cyber-surface: #080D1D;
+  --color-electric-blue: #145CFF;
+  --color-cyan-glow: #00E5FF;
+  --color-violet-glow: #8B3DFF;
+  --color-magenta-glow: #FF28D7;
+  --color-neon-green: #39FF72;
+  --color-cyber-gold: #FFC247;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+  --bg-primary: #03040B;
+  --bg-secondary: #080D1D;
+  --bg-card: #0B1025;
+  --color-blue: #145CFF;
+  --color-cyan: #00E5FF;
+  --color-violet: #8B3DFF;
+  --color-magenta: #FF28D7;
+  --color-green: #39FF72;
+  --color-gold: #FFC247;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #03040B;
+  color: #F7FAFF;
+}
+
+body {
+  background-color: #03040B;
+  color: #F7FAFF;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #03040B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #145CFF44;
+  border-radius: 4px;
+  border: 1px solid #00E5FF33;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF77;
+}
+
+/* Selection */
+::selection {
+  background: #00E5FF33;
+  color: #00E5FF;
+}
+
+/* Cyber Glow Animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.08); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-reverse 7s ease-in-out infinite 1s;
+}
+
+.animate-gradient-text {
+  background-size: 200% 200%;
+  animation: gradient-x 6s ease infinite;
+}
+
+/* Perspective Cyber Grid */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.cyber-grid-dense {
+  background-image: 
+    linear-gradient(to right, rgba(20, 92, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 92, 255, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Neon Glow Borders */
+.glow-box-blue {
+  box-shadow: 0 0 25px -5px rgba(20, 92, 255, 0.45);
+}
+
+.glow-box-cyan {
+  box-shadow: 0 0 25px -5px rgba(0, 229, 255, 0.45);
+}
+
+.glow-box-magenta {
+  box-shadow: 0 0 25px -5px rgba(255, 40, 215, 0.45);
+}
+
+.glow-box-purple {
+  box-shadow: 0 0 25px -5px rgba(139, 61, 255, 0.45);
+}
+
+.glow-box-green {
+  box-shadow: 0 0 25px -5px rgba(57, 255, 114, 0.45);
+}
+
+.glow-box-gold {
+  box-shadow: 0 0 25px -5px rgba(255, 194, 71, 0.45);
+}
+
+/* Text glow */
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 12px rgba(20, 92, 255, 0.7);
+}
+
+.text-glow-magenta {
+  text-shadow: 0 0 12px rgba(255, 40, 215, 0.6);
+}
+
+/* Glass panel */
+.glass-panel {
+  background: rgba(11, 16, 37, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 229, 255, 0.12);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(11, 16, 37, 0.9);
+  border-color: rgba(0, 229, 255, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(0, 229, 255, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
