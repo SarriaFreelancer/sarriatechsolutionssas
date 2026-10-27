@@ -99,9 +99,9 @@ export default function HeroVisual() {
                     </span>
                     <span className="text-xs text-[#A8B3D1] font-mono">Cluster Bogotá · Latencia 14ms</span>
                   </div>
-                  <h3 className="hero-dashboard-title text-base sm:text-lg font-bold text-white mt-1">
+                  <h2 className="hero-dashboard-title text-base sm:text-lg font-bold text-white mt-1">
                     Control Operativo &amp; Métricas en Tiempo Real
-                  </h3>
+                  </h2>
                 </div>
 
                 <button
@@ -193,8 +193,8 @@ export default function HeroVisual() {
               <div className="grid grid-cols-4 gap-2 pt-1">
                 {[
                   { label: "Innovación", color: "border-[#00E5FF]/40 text-[#00E5FF]" },
-                  { label: "Rendimiento", color: "border-[#145CFF]/40 text-[#145CFF]" },
-                  { label: "Seguridad", color: "border-[#8B3DFF]/40 text-[#8B3DFF]" },
+                  { label: "Rendimiento", color: "border-[#60A5FA]/40 text-[#60A5FA]" },
+                  { label: "Seguridad", color: "border-[#A78BFA]/40 text-[#A78BFA]" },
                   { label: "Escalabilidad", color: "border-[#FF28D7]/40 text-[#FF28D7]" },
                 ].map((item, idx) => (
                   <div
@@ -232,7 +232,7 @@ export default function HeroVisual() {
                     <span className="text-white font-bold">2. NLP Engine:</span>
                     <span className="text-[#00E5FF]">Intención: `cotizar_software_medida`, Presupuesto estimado extraído</span>
                   </div>
-                  <span className="text-[#8B3DFF]">98% Confidence</span>
+                  <span className="text-[#A78BFA]">98% Confidence</span>
                 </div>
 
                 <div className="p-2.5 rounded-lg bg-[#0B1025] border-l-4 border-l-[#145CFF] border border-[#145CFF]/30 flex items-center justify-between">
@@ -240,7 +240,7 @@ export default function HeroVisual() {
                     <span className="text-white font-bold">3. Database Sync:</span>
                     <span className="text-[#A8B3D1]">Creación de Lead en GNS CRM + Alerta en tiempo real</span>
                   </div>
-                  <span className="text-[#145CFF]">Sync 12ms</span>
+                  <span className="text-[#60A5FA]">Sync 12ms</span>
                 </div>
 
                 <div className="p-2.5 rounded-lg bg-[#0B1025] border-l-4 border-l-[#FF28D7] border border-[#FF28D7]/30 flex items-center justify-between">
@@ -261,7 +261,7 @@ export default function HeroVisual() {
                 <span className="text-[#FF28D7]">import</span> &#123; SarriaTechClient &#125; <span className="text-[#FF28D7]">from</span> <span className="text-[#39FF72]">&quot;@sarriatech/core&quot;</span>;
               </div>
               <div className="py-1">
-                <span className="text-[#145CFF]">const</span> client = <span className="text-[#FF28D7]">new</span> <span className="text-[#00E5FF]">SarriaTechClient</span>(&#123;
+                <span className="text-[#60A5FA]">const</span> client = <span className="text-[#FF28D7]">new</span> <span className="text-[#00E5FF]">SarriaTechClient</span>(&#123;
               </div>
               <div className="pl-4">
                 apiKey: process.env.<span className="text-[#FFC247]">SARRIATECH_API_KEY</span>,
@@ -274,7 +274,7 @@ export default function HeroVisual() {
               </div>
               <div>&#125;);</div>
               <div className="pt-2">
-                <span className="text-[#145CFF]">await</span> client.automations.<span className="text-[#00E5FF]">deployPipeline</span>(&#123;
+                <span className="text-[#60A5FA]">await</span> client.automations.<span className="text-[#00E5FF]">deployPipeline</span>(&#123;
               </div>
               <div className="pl-4">
                 target: <span className="text-[#39FF72]">&quot;https://sarriatech.tech&quot;</span>,
@@ -327,8 +327,8 @@ export default function HeroVisual() {
               <span className="text-[8px] text-[#00E5FF] block font-mono">Diseño</span>
               <span className="text-[8px] text-white font-bold">Moderno</span>
             </div>
-            <div className="p-1 rounded bg-[#03040B] border border-[#8B3DFF]/30">
-              <span className="text-[8px] text-[#8B3DFF] block font-mono">Multi</span>
+            <div className="p-1 rounded bg-[#03040B] border border-[#A78BFA]/30">
+              <span className="text-[8px] text-[#A78BFA] block font-mono">Multi</span>
               <span className="text-[8px] text-white font-bold">Device</span>
             </div>
             <div className="p-1 rounded bg-[#03040B] border border-[#39FF72]/30">
@@ -357,8 +357,8 @@ export default function HeroVisual() {
       </div>
 
       {/* Floating Badge Right Top: Nexus */}
-      <div className="hidden lg:flex absolute top-12 -right-8 items-center gap-2.5 px-3 py-2 rounded-xl bg-[#080D1D]/90 border border-[#8B3DFF]/40 shadow-[0_0_20px_rgba(139,61,255,0.3)] backdrop-blur-md animate-float">
-        <div className="relative w-7 h-7 rounded-lg overflow-hidden flex items-center justify-center bg-[#03040B] border border-[#8B3DFF]/40">
+      <div className="hidden lg:flex absolute top-12 -right-8 items-center gap-2.5 px-3 py-2 rounded-xl bg-[#080D1D]/90 border border-[#A78BFA]/40 shadow-[0_0_20px_rgba(139,61,255,0.3)] backdrop-blur-md animate-float">
+        <div className="relative w-7 h-7 rounded-lg overflow-hidden flex items-center justify-center bg-[#03040B] border border-[#A78BFA]/40">
           <Image
             src="/images/nexus-logo.png"
             alt="Nexus Logo"
@@ -368,7 +368,7 @@ export default function HeroVisual() {
           />
         </div>
         <div className="leading-tight">
-          <span className="text-[10px] font-mono text-[#8B3DFF] block">DEV OPERATIONS</span>
+          <span className="text-[10px] font-mono text-[#A78BFA] block">DEV OPERATIONS</span>
           <span className="text-xs font-bold text-white">NEXUS Platform</span>
         </div>
       </div>

@@ -54,9 +54,9 @@ export default function Footer() {
 
           {/* Column 2: Products */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#00E5FF]">
+            <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-[#00E5FF]">
               {t.footer.columns.products}
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm text-[#A8B3D1]">
               <li>
                 <a
@@ -104,9 +104,9 @@ export default function Footer() {
 
           {/* Column 3: Services */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#8B3DFF]">
+            <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-[#A78BFA]">
               {t.footer.columns.services}
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm text-[#A8B3D1]">
               <li>
                 <button
@@ -158,9 +158,9 @@ export default function Footer() {
 
           {/* Column 4: Contact & Social */}
           <div className="space-y-3">
-            <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-[#39FF72]">
+            <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-[#39FF72]">
               {t.footer.columns.contact}
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm text-[#A8B3D1]">
               <li>
                 <a

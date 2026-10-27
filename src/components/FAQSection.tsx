@@ -197,9 +197,9 @@ export default function FAQSection() {
               <Phone className="w-5 h-5 fill-current" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white">
+              <h3 className="text-sm font-bold text-white">
                 {lang === "en" ? "¿Have a custom technical question?" : "¿Tienes una pregunta técnica específica?"}
-              </h4>
+              </h3>
               <p className="text-xs text-[#A8B3D1]">
                 {lang === "en"
                   ? "Chat directly with our lead software engineers."
