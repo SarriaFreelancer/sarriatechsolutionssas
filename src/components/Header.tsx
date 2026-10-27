@@ -112,7 +112,7 @@ export default function Header() {
                     ? "bg-gradient-to-r from-[#145CFF] to-[#00E5FF] text-white shadow-[0_0_10px_rgba(0,229,255,0.4)]"
                     : "text-[#A8B3D1] hover:text-white"
                 }`}
-                aria-label="ES - Cambiar idioma a Español"
+                aria-label="Cambiar idioma a Español"
               >
                 ES
               </button>
@@ -124,7 +124,7 @@ export default function Header() {
                     ? "bg-gradient-to-r from-[#145CFF] to-[#00E5FF] text-white shadow-[0_0_10px_rgba(0,229,255,0.4)]"
                     : "text-[#A8B3D1] hover:text-white"
                 }`}
-                aria-label="EN - Change language to English"
+                aria-label="Change language to English"
               >
                 EN
               </button>
@@ -133,7 +133,6 @@ export default function Header() {
             {/* Glowing CTA Button */}
             <a
               href="#contacto"
-              title="Hablemos de tu proyecto - Cotización de software y automatización con SarriaTech Solutions S.A.S."
               className="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white overflow-hidden transition-all duration-300 transform hover:scale-[1.03] active:scale-95 bg-gradient-to-r from-[#145CFF] via-[#00E5FF] to-[#8B3DFF] hover:from-[#00E5FF] hover:to-[#FF28D7] shadow-[0_0_20px_rgba(20,92,255,0.45)] hover:shadow-[0_0_30px_rgba(0,229,255,0.7)]"
             >
               <MessageSquare className="w-4 h-4 text-white" />
@@ -158,7 +157,7 @@ export default function Header() {
               type="button"
               onClick={() => setLang(lang === "es" ? "en" : "es")}
               className="p-1.5 text-xs font-bold text-[#00E5FF] bg-[#0B1025] rounded-lg border border-[#00E5FF]/30 flex items-center gap-1"
-              aria-label={`${lang.toUpperCase()} - Cambiar idioma`}
+              aria-label="Alternar idioma"
             >
               <Globe className="w-3.5 h-3.5" />
               <span>{lang.toUpperCase()}</span>

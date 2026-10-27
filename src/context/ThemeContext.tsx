@@ -13,22 +13,18 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Dark mode is always the initial default
   const [theme, setThemeState] = useState<Theme>("dark");
 
   useEffect(() => {
     try {
       const savedTheme = localStorage.getItem("sarriatech_theme") as Theme;
-      if (savedTheme === "light") {
-        setThemeState("light");
-        applyTheme("light");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        setThemeState(savedTheme);
+        applyTheme(savedTheme);
       } else {
-        // Default strictly to dark mode
-        setThemeState("dark");
         applyTheme("dark");
       }
     } catch {
-      setThemeState("dark");
       applyTheme("dark");
     }
   }, []);
