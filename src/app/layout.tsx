@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/context/ThemeContext";
@@ -8,6 +8,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import AIAgentChatModal from "@/components/AIAgentChatModal";
+
+export const viewport: Viewport = {
+  themeColor: "#03040B",
+  width: "device-width",
+  initialScale: 1,
+};
 
 const keywordsList = [
   // Marca y Entidad
@@ -74,10 +80,6 @@ export const metadata: Metadata = {
   classification: "Desarrollo de Software, Automatización de Procesos e Inteligencia Artificial",
   alternates: {
     canonical: "https://sarriatech.tech",
-    languages: {
-      "es-CO": "https://sarriatech.tech",
-      "en-US": "https://sarriatech.tech",
-    },
   },
   openGraph: {
     type: "website",
@@ -208,12 +210,6 @@ export default function RootLayout({
     <html lang="es" className="dark scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta name="keywords" content={keywordsList.join(", ")} />
-        <meta name="geo.region" content="CO" />
-        <meta name="geo.placename" content="Colombia" />
-        <meta name="geo.position" content="4.570868;-74.297333" />
-        <meta name="ICBM" content="4.570868, -74.297333" />
-        <meta name="theme-color" content="#03040B" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

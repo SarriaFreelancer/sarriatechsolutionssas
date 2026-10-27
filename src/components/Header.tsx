@@ -39,48 +39,13 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { 
-      href: "#inicio", 
-      label: t.nav.home, 
-      id: "inicio",
-      seoTitle: "SarriaTech Solutions - Desarrollo de Software, Automatización e Inteligencia Artificial"
-    },
-    { 
-      href: "#productos", 
-      label: t.nav.products, 
-      id: "productos",
-      seoTitle: "Plataformas Propias: GNS ERP Inventarios, Nexus Software, VCA Villa Rica"
-    },
-    { 
-      href: "#servicios", 
-      label: t.nav.services, 
-      id: "servicios",
-      seoTitle: "Servicios de Desarrollo de Software a Medida, Web, Analítica y APIs en Colombia"
-    },
-    { 
-      href: "#automatizacion", 
-      label: t.nav.automation, 
-      id: "automatizacion",
-      seoTitle: "Automatización de Procesos RPA y Agentes de Inteligencia Artificial para WhatsApp"
-    },
-    { 
-      href: "#metodologia", 
-      label: t.nav.methodology, 
-      id: "metodologia",
-      seoTitle: "Metodología de Ingeniería de Software Ágil y Calidad Tecnológica"
-    },
-    { 
-      href: "#nosotros", 
-      label: t.nav.about, 
-      id: "nosotros",
-      seoTitle: "Sobre SarriaTech Solutions S.A.S. - Empresa de Tecnología y Software en Colombia"
-    },
-    { 
-      href: "#contacto", 
-      label: t.nav.contact, 
-      id: "contacto",
-      seoTitle: "Contactar a SarriaTech Solutions - Cotizar Proyectos de Software e Inteligencia Artificial"
-    },
+    { href: "#inicio", label: t.nav.home, id: "inicio" },
+    { href: "#productos", label: t.nav.products, id: "productos" },
+    { href: "#servicios", label: t.nav.services, id: "servicios" },
+    { href: "#automatizacion", label: t.nav.automation, id: "automatizacion" },
+    { href: "#metodologia", label: t.nav.methodology, id: "metodologia" },
+    { href: "#nosotros", label: t.nav.about, id: "nosotros" },
+    { href: "#contacto", label: t.nav.contact, id: "contacto" },
   ];
 
   return (
@@ -104,7 +69,6 @@ export default function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  title={link.seoTitle}
                   className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md ${
                     isActive
                       ? "text-[#00E5FF] font-semibold"
@@ -220,7 +184,6 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                title={link.seoTitle}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-4 py-3 rounded-lg text-base font-medium flex items-center justify-between ${
                   activeSection === link.id
