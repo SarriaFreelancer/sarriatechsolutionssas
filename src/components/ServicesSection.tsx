@@ -211,7 +211,7 @@ export default function ServicesSection() {
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
 
-                  <span className="text-[10px] font-mono text-[#A8B3D1]/50 group-hover:text-[#A8B3D1] transition-colors">
+                  <span className="text-[10px] font-mono text-[#A8B3D1] transition-colors">
                     SarriaTech Dev
                   </span>
                 </div>

@@ -313,11 +313,12 @@ export default function ContactSection() {
                   {/* Row 1: Name and Company */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
+                      <label htmlFor="fullName" className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
                         {t.contact.form.fullName} *
                       </label>
                       <input
                         type="text"
+                        id="fullName"
                         name="fullName"
                         value={formData.fullName}
                         onChange={handleChange}
@@ -328,11 +329,12 @@ export default function ContactSection() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
+                      <label htmlFor="company" className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
                         {t.contact.form.company}
                       </label>
                       <input
                         type="text"
+                        id="company"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
@@ -345,11 +347,12 @@ export default function ContactSection() {
                   {/* Row 2: Email and Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
+                      <label htmlFor="email" className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
                         {t.contact.form.email} *
                       </label>
                       <input
                         type="email"
+                        id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -360,11 +363,12 @@ export default function ContactSection() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
+                      <label htmlFor="phone" className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
                         {t.contact.form.phone}
                       </label>
                       <input
                         type="tel"
+                        id="phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
@@ -377,11 +381,12 @@ export default function ContactSection() {
                   {/* Row 3: Country and Service */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
+                      <label htmlFor="country" className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
                         {t.contact.form.country} *
                       </label>
                       <input
                         type="text"
+                        id="country"
                         name="country"
                         value={formData.country}
                         onChange={handleChange}
@@ -392,11 +397,13 @@ export default function ContactSection() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
+                      <label htmlFor="service" className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
                         {t.contact.form.service} *
                       </label>
                       <select
+                        id="service"
                         name="service"
+                        aria-label="Servicio de interés"
                         value={formData.service}
                         onChange={handleChange}
                         required
@@ -424,11 +431,13 @@ export default function ContactSection() {
 
                   {/* Budget Selector */}
                   <div>
-                    <label className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
+                    <label htmlFor="estimatedBudget" className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
                       {t.contact.form.estimatedBudget}
                     </label>
                     <select
+                      id="estimatedBudget"
                       name="estimatedBudget"
+                      aria-label="Rango de presupuesto"
                       value={formData.estimatedBudget}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl bg-[#080D1D] border border-[#00E5FF]/20 focus:border-[#00E5FF] focus:outline-none text-white text-sm transition-all"
@@ -444,10 +453,11 @@ export default function ContactSection() {
 
                   {/* Project Description */}
                   <div>
-                    <label className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
+                    <label htmlFor="description" className="block text-xs font-mono font-medium text-[#A8B3D1] mb-1.5">
                       {t.contact.form.description} *
                     </label>
                     <textarea
+                      id="description"
                       name="description"
                       rows={4}
                       value={formData.description}

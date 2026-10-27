@@ -112,7 +112,7 @@ export default function Header() {
                     ? "bg-gradient-to-r from-[#145CFF] to-[#00E5FF] text-white shadow-[0_0_10px_rgba(0,229,255,0.4)]"
                     : "text-[#A8B3D1] hover:text-white"
                 }`}
-                aria-label="Cambiar idioma a Español"
+                aria-label="ES - Cambiar idioma a Español"
               >
                 ES
               </button>
@@ -124,7 +124,7 @@ export default function Header() {
                     ? "bg-gradient-to-r from-[#145CFF] to-[#00E5FF] text-white shadow-[0_0_10px_rgba(0,229,255,0.4)]"
                     : "text-[#A8B3D1] hover:text-white"
                 }`}
-                aria-label="Change language to English"
+                aria-label="EN - Change language to English"
               >
                 EN
               </button>
@@ -157,7 +157,7 @@ export default function Header() {
               type="button"
               onClick={() => setLang(lang === "es" ? "en" : "es")}
               className="p-1.5 text-xs font-bold text-[#00E5FF] bg-[#0B1025] rounded-lg border border-[#00E5FF]/30 flex items-center gap-1"
-              aria-label="Alternar idioma"
+              aria-label={`${lang.toUpperCase()} - Cambiar idioma`}
             >
               <Globe className="w-3.5 h-3.5" />
               <span>{lang.toUpperCase()}</span>

@@ -188,7 +188,7 @@ export default function BudgetEstimator() {
 
               {/* Step 2: Extra Add-ons */}
               <div>
-                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-[#8B3DFF] mb-3">
+                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-[#A870FF] mb-3">
                   2. Módulos o integraciones adicionales
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -235,9 +235,9 @@ export default function BudgetEstimator() {
                 <span className="text-xs font-mono text-[#A8B3D1] block mb-1">
                   Resumen de la estimación
                 </span>
-                <h4 className="text-lg font-bold text-white">
+                <h3 className="text-lg font-bold text-white">
                   {selectedService.name}
-                </h4>
+                </h3>
               </div>
 
               {/* Included items */}
@@ -252,7 +252,7 @@ export default function BudgetEstimator() {
                   const feat = features.find((f) => f.id === fId);
                   if (!feat) return null;
                   return (
-                    <div key={fId} className="flex justify-between text-[#8B3DFF]">
+                    <div key={fId} className="flex justify-between text-[#A870FF]">
                       <span className="truncate pr-2">+ {feat.name}</span>
                       <span className="shrink-0 font-bold">
                         ${feat.price.toLocaleString("es-CO")}

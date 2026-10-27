@@ -45,7 +45,7 @@ export default function SarriaTechLogo({
     <Link
       href="#inicio"
       className={`group inline-flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02] focus:outline-none ${className}`}
-      aria-label="SarriaTech Solutions - Inicio"
+      aria-label="SarriaTech Solutions S.A.S. - Inicio"
     >
       {/* Hexagonal / Angular Code Badge */}
       <div className="relative flex items-center justify-center">

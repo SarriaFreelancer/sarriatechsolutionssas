@@ -326,7 +326,7 @@ export default function ProductsSection() {
                         <span>https://nexus.sarriatech.tech/</span>
                         <ExternalLink className="w-3 h-3" />
                       </a>
-                      <span className="text-[#8B3DFF] font-bold">SarriaTech Studio</span>
+                      <span className="text-[#A870FF] font-bold">SarriaTech Studio</span>
                     </div>
 
                   </div>
@@ -360,7 +360,7 @@ export default function ProductsSection() {
                     <h3 className="text-2xl sm:text-3xl font-black text-white">
                       {t.products.nexus.name}
                     </h3>
-                    <p className="text-xs font-mono text-[#8B3DFF] mt-0.5">
+                    <p className="text-xs font-mono text-[#A870FF] mt-0.5">
                       SarriaTech Studio | Nexus Enterprise Platform
                     </p>
                   </div>

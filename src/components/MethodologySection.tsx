@@ -89,7 +89,7 @@ export default function MethodologySection() {
 
                   {/* Bottom indicator */}
                   <div className="mt-6 pt-4 border-t border-[#00E5FF]/10 flex items-center justify-between text-[11px] font-mono">
-                    <span className={isSelected ? "text-[#00E5FF] font-bold" : "text-[#A8B3D1]/60"}>
+                    <span className={isSelected ? "text-[#00E5FF] font-bold" : "text-[#A8B3D1]"}>
                       Fase {idx + 1}/5
                     </span>
                     <span className={`w-2 h-2 rounded-full ${isSelected ? "bg-[#00E5FF] animate-ping" : "bg-[#00E5FF]/40"}`} />
@@ -102,7 +102,7 @@ export default function MethodologySection() {
         </div>
 
         {/* Note on methodology */}
-        <div className="mt-12 text-center text-xs font-mono text-[#A8B3D1]/70 max-w-xl mx-auto">
+        <div className="mt-12 text-center text-xs font-mono text-[#A8B3D1] max-w-xl mx-auto">
           Enfoque ágil e iterativo: entregas continuas, retroalimentación temprana y control riguroso de calidad en cada fase.
         </div>
 

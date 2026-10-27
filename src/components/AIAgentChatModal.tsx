@@ -131,7 +131,7 @@ export default function AIAgentChatModal() {
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#080D1D] text-white border-2 border-[#00E5FF]/60 shadow-[0_0_25px_rgba(0,229,255,0.45)] hover:shadow-[0_0_35px_rgba(0,229,255,0.8)] hover:scale-105 active:scale-95 transition-all duration-300"
-          aria-label="Hablar con el Agente de IA de SarriaTech"
+          aria-label="SarriaTech AI - Abrir asistente de IA"
         >
           {/* Pulsing ring */}
           <span className="w-2.5 h-2.5 rounded-full bg-[#00E5FF] animate-ping" />
@@ -174,6 +174,7 @@ export default function AIAgentChatModal() {
                 onClick={handleReset}
                 className="p-1.5 rounded-lg text-[#A8B3D1] hover:text-white hover:bg-[#0B1025] transition-colors"
                 title="Reiniciar conversación"
+                aria-label="Reiniciar conversación"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
               </button>
@@ -182,6 +183,7 @@ export default function AIAgentChatModal() {
                 onClick={() => setIsOpen(false)}
                 className="p-1.5 rounded-lg text-[#A8B3D1] hover:text-white hover:bg-[#0B1025] transition-colors"
                 title="Cerrar ventana"
+                aria-label="Cerrar ventana"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -196,6 +198,7 @@ export default function AIAgentChatModal() {
                 type="button"
                 onClick={() => handleSend(prompt)}
                 disabled={isLoading}
+
                 className="whitespace-nowrap px-2.5 py-1 rounded-full text-[10px] font-mono bg-[#0B1025] hover:bg-[#145CFF]/20 border border-[#00E5FF]/20 hover:border-[#00E5FF]/60 text-[#A8B3D1] hover:text-white transition-all shrink-0"
               >
                 {prompt}
@@ -268,8 +271,10 @@ export default function AIAgentChatModal() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              aria-label="Escribe tu mensaje para el asistente"
               placeholder="Pregunta sobre servicios, cotizaciones o tecnología..."
               disabled={isLoading}
+
               className="flex-1 px-3.5 py-2.5 rounded-xl bg-[#03040B] border border-[#00E5FF]/20 focus:border-[#00E5FF] focus:outline-none text-white text-xs sm:text-sm placeholder-[#A8B3D1]/50"
             />
             <button

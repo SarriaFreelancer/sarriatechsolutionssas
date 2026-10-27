@@ -104,7 +104,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="p-2.5 rounded-lg bg-[#0B1025]/50 border border-[#8B3DFF]/20">
-                <div className="text-base sm:text-xl font-bold font-mono text-[#8B3DFF]">
+                <div className="text-base sm:text-xl font-bold font-mono text-[#A870FF]">
                   {t.hero.stats.automation}
                 </div>
                 <div className="text-[10px] text-[#A8B3D1] leading-tight">
